@@ -1,11 +1,12 @@
 # Codex Skills Collection
 
-Private backup and sharing repository for custom Codex skills.
+Backup and sharing repository for custom Codex skills.
 
-This repository contains 367 user-level skills exported from:
+This repository contains 395 user-level skills collected from Windows and Linux Codex installations:
 
 ```text
-%USERPROFILE%\.codex\skills
+Windows: %USERPROFILE%\.codex\skills
+Linux:   ~/.codex/skills
 ```
 
 Codex's built-in `.system` skills and plugin cache files are intentionally not included. Install Codex and the required plugins normally on each computer.
