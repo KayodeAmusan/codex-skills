@@ -1,16 +1,16 @@
 # Codex Skills
 
-**395 skills for building software, researching ideas, running a business, and working with data.**
+**396 skills for building software, researching ideas, running a business, and working with data.**
 
 Pick a skill, give Codex a task, and it follows a workflow written for that job. That might mean reviewing a pull request, planning a product launch, checking a team's injury news, or turning a pile of notes into a useful research brief.
 
 Each folder includes a `SKILL.md` with instructions and setup notes. Some also include scripts, templates, and reference material. You can install one skill or the whole collection.
 
-[Get started](#get-started) · [Installation](#installation) · [Examples](#try-it) · [All 395 skills](#skill-catalog) · [Updates](#update-or-remove-skills) · [Troubleshooting](#troubleshooting)
+[Get started](#get-started) · [Installation](#installation) · [Examples](#try-it) · [All 396 skills](#skill-catalog) · [Updates](#update-or-remove-skills) · [Troubleshooting](#troubleshooting)
 
 ## Get started
 
-Start with a task you already have. You don't need to install all 395 skills.
+Start with a task you already have. You don't need to install all 396 skills.
 
 | If you want to… | Start here |
 | --- | --- |
@@ -161,10 +161,15 @@ Use $playwright-pro to add tests for checkout, including a failed payment.
 
 Most folder names match the skill's invocation name. The exception here is [`pw`](skills/pw/SKILL.md), whose `name` field is `playwright-pro`.
 
+```text
+Use $graphify . to map this project and explain how its main components connect.
+```
+
 ## Extra tools and accounts
 
 | Skill family | What to check |
 | --- | --- |
+| Graphify | Install the `graphifyy` Python package for the `graphify` CLI. Code extraction runs locally without an API key; semantic extraction can use your assistant. See [setup notes](skills/graphify/INSTALLATION.md). |
 | Sports data and news | Install the shared `sports-skills` Python CLI. The public data commands used by these skills need no API key. Coverage varies by league and source. |
 | Browser automation and testing | Check browser, Playwright, and any named MCP requirements in the skill. BrowserStack and TestRail need their own service setup. |
 | Cloud and workplace administration | Configure the relevant CLI, account, permissions, and connector for AWS, Azure, GCP, Google Workspace, Microsoft 365, or Atlassian. |
@@ -181,15 +186,22 @@ sports-skills --help
 
 Install [pipx](https://pipx.pypa.io/stable/installation/) first if that command isn't available. Advanced nflverse analysis may need the package's `nfl` extra; check the NFL skill before requesting those datasets. The [`Machina project`](https://github.com/machina-sports/sports-skills) documents its data sources and package options.
 
+For Graphify, install its CLI separately from the skill folder:
+
+```bash
+pipx install graphifyy
+graphify --help
+```
+
 No accounts, credentials, installed packages, or paid subscriptions are included in this repository.
 
 ## Skill catalog
 
-All **395 skills** are listed below. Each link opens the skill's instructions. The descriptions explain the job; the linked file covers its inputs, tools, and limits. Some entries are routers that help you choose a specialist, and a few preserve older workflow names.
+All **396 skills** are listed below. Each link opens the skill's instructions. The descriptions explain the job; the linked file covers its inputs, tools, and limits. Some entries are routers that help you choose a specialist, and a few preserve older workflow names.
 
 | Browse by topic | Skills |
 | --- | ---: |
-| [Engineering and code review](#engineering-and-code-review) | 38 |
+| [Engineering and code review](#engineering-and-code-review) | 39 |
 | [Testing and quality assurance](#testing-and-quality-assurance) | 12 |
 | [Cloud, infrastructure, and reliability](#cloud-infrastructure-and-reliability) | 15 |
 | [Security and privacy](#security-and-privacy) | 13 |
@@ -209,7 +221,7 @@ All **395 skills** are listed below. Each link opens the skill's instructions. T
 ### Engineering and code review
 
 <details>
-<summary>Browse 38 skills</summary>
+<summary>Browse 39 skills</summary>
 
 | Skill | What it does |
 | --- | --- |
@@ -231,6 +243,7 @@ All **395 skills** are listed below. Each link opens the skill's instructions. T
 | [`feature-flags-architect`](skills/feature-flags-architect/SKILL.md) | Plan feature flags, staged rollouts, kill switches, and flag retirement. |
 | [`focused-fix`](skills/focused-fix/SKILL.md) | Repair a broken feature or module across its full workflow. |
 | [`git-worktree-manager`](skills/git-worktree-manager/SKILL.md) | Set up isolated Git worktrees for parallel development and clean them up afterwards. |
+| [`graphify`](skills/graphify/SKILL.md) | Map code and documents into a persistent knowledge graph, then query relationships and architecture. |
 | [`karpathy-coder`](skills/karpathy-coder/SKILL.md) | Keep coding changes small, state assumptions, and define checks before implementation. |
 | [`migration-architect`](skills/migration-architect/SKILL.md) | Plan system and database migrations with compatibility checks and rollback steps. |
 | [`minimalist`](skills/minimalist/SKILL.md) | Reduce unnecessary code, dependencies, and abstractions. |
@@ -812,7 +825,7 @@ Keep credentials, `.env` files, private keys, personal records, caches, and virt
 
 ## Credits and reuse
 
-This is a collection of workflows from different sources, including [Machina Sports](https://github.com/machina-sports/sports-skills). Original author details, attribution, and license declarations are retained in the skill files where supplied.
+This is a collection of workflows from different sources, including [Machina Sports](https://github.com/machina-sports/sports-skills) and [Graphify](https://github.com/Graphify-Labs/graphify). Original author details, attribution, and license declarations are retained in the skill files where supplied.
 
 There is no single repository-wide license file covering this collection. Check the individual skill and its source before redistributing or adapting it; don't assume one skill's license applies to every folder.
 
